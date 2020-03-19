@@ -7,7 +7,7 @@
       <form class="form-inline">
         <div class="form-group flex-fill">
             <input
-              class="form-control flex-fill" type="text" placeholder="What is your task/s to do?"
+              class="form-control flex-fill" type="text" placeholder="What you need to do?"
             >
             <div class="btn-group ml-2" role="group" aria-label="Basic example">
               <button type="button" class="btn btn-warning">Reset</button>
