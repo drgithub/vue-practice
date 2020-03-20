@@ -31,7 +31,7 @@ export default {
     },
     update() {
       this.item.done = true;
-      this.submit(this.item);
+      this.submit(null, this.item);
     },
     getDate(type) {
       switch (type) {
@@ -39,7 +39,7 @@ export default {
           return DateFormat.format(this.item.completed, 'formal');
         }
         case 'submitted': {
-          return DateFormat.format(this.item.submitted, 'formal', new Date().getTimezoneOffset());
+          return DateFormat.format(this.item.submitted, 'formal', this.item.timezoneOffset);
         }
         default: {
           return DateFormat.format(this.item.completed);

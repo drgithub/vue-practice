@@ -4,7 +4,7 @@
       <h3 class="m-0 text-white">Dino's Todo List</h3>
     </div>
     <div class="container-fluid py-1 px-1">
-      <form @submit="submit()" class="form-inline d-flex form-group flex-grow-1 m-0">
+      <form @submit="submit" class="form-inline d-flex form-group flex-grow-1 m-0">
         <div class="d-flex flex-row input-group btn-group m-1 flex-grow-1"
           role="group"
           aria-label="Basic example"
@@ -58,7 +58,7 @@ export default {
   },
   methods: {
 
-    submit(updateItem) {
+    submit(e, updateItem) {
       const saveItem = updateItem || this.newItem;
       if (typeof (Storage) !== 'undefined') {
         if (updateItem) {
@@ -71,6 +71,9 @@ export default {
       }
       this.reset();
       this.updateItems();
+      if (e) {
+        e.preventDefault();
+      }
     },
 
     onChange() {
