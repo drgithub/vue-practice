@@ -5,7 +5,7 @@
       <i>completed on : {{getDate('completed')}}</i>
     </p>
     <p class="" v-if="item.submitted > 0">
-      <i>submitted on : {{getDate('submitted')}}</i>
+      <i>created on : {{getDate('submitted')}}</i>
     </p>
     <button v-if="!item.done" @click="update()">Done</button>
   </div>
